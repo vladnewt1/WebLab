@@ -15,16 +15,28 @@
             font-family: 'Roboto', sans-serif;
             background-color: #f2f4f8;
             display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Змінено на flex-start, щоб заголовок був зверху */
+            flex-direction: column; 
+            justify-content: flex-start;
+            align-items: center;
             height: 100vh;
             color: #333;
+            gap: 20px;
+        }
+        .github-link {
+            font-size: 1.2em;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px; 
+        }
+        .github-link:hover {
+            text-decoration: underline;
         }
         .container {
             width: 100%;
             max-width: 400px;
             padding: 40px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
             border-radius: 8px;
             background-color: #fff;
             display: flex;
@@ -74,6 +86,10 @@
     </style>
 </head>
 <body>
+    <a href="https://github.com/vladnewt1" class="github-link" target="_blank">
+        GitHub профіль
+    </a>
+
     <div class="container">
         <h1>Форма реєстрації</h1>
         <form action="https://webhook.site/4a1c25a1-8473-4674-b526-79e0108b0018" method="post">
