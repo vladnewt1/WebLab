@@ -6,24 +6,30 @@
     <title>Реєстрація</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f2f5;
+            background-color: #f2f4f8;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
             color: #333;
         }
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: 500;
+        form {
+            background-color: #fff;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
         h1 {
             text-align: center;
@@ -31,20 +37,10 @@
             font-size: 1.8em;
             margin-bottom: 20px;
         }
-        form {
-            background-color: #fff;
-            padding: 30px 40px;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            border-radius: 8px;
-            box-sizing: border-box;
-        }
         label {
             font-weight: 500;
             color: #555;
-            display: block;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
         .required-label::after {
             content: " *";
@@ -56,14 +52,12 @@
         select {
             width: 100%;
             padding: 12px;
-            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1em;
-            box-sizing: border-box;
+            color: #333;
         }
         input[type="submit"] {
-            width: 100%;
             padding: 12px;
             background-color: #007BFF;
             color: #fff;
@@ -80,10 +74,9 @@
     </style>
 </head>
 <body>
-    <h1>Форма реєстрації</h1>
-
     <form action="https://webhook.site/4a1c25a1-8473-4674-b526-79e0108b0018" method="post">
-        <a href="https://github.com/vladnewt1/WebLab">Список лабораторних</a>
+        <h1>Форма реєстрації</h1>
+        
         <label for="first-name" class="required-label">Ім'я:</label>
         <input type="text" id="first-name" name="first-name" required pattern="[A-Za-zА-Яа-яЁёІіЇїЄє']+">
 
