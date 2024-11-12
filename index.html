@@ -16,20 +16,20 @@
             background-color: #f2f4f8;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Змінено на flex-start, щоб заголовок був зверху */
             height: 100vh;
             color: #333;
         }
-        form {
-            background-color: #fff;
-            padding: 40px;
+        .container {
             width: 100%;
             max-width: 400px;
+            padding: 40px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             border-radius: 8px;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
         }
         h1 {
             text-align: center;
@@ -74,31 +74,32 @@
     </style>
 </head>
 <body>
-    <form action="https://webhook.site/4a1c25a1-8473-4674-b526-79e0108b0018" method="post">
+    <div class="container">
         <h1>Форма реєстрації</h1>
-        
-        <label for="first-name" class="required-label">Ім'я:</label>
-        <input type="text" id="first-name" name="first-name" required pattern="[A-Za-zА-Яа-яЁёІіЇїЄє']+">
+        <form action="https://webhook.site/4a1c25a1-8473-4674-b526-79e0108b0018" method="post">
+            <label for="first-name" class="required-label">Ім'я:</label>
+            <input type="text" id="first-name" name="first-name" required pattern="[A-Za-zА-Яа-яЁёІіЇїЄє']+">
 
-        <label for="last-name">Прізвище (не обов'язкове):</label>
-        <input type="text" id="last-name" name="last-name" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє']+">
+            <label for="last-name">Прізвище (не обов'язкове):</label>
+            <input type="text" id="last-name" name="last-name" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє']+">
 
-        <label for="email" class="required-label">Електронна пошта:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email" class="required-label">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="password" class="required-label">Пароль:</label>
-        <input type="password" id="password" name="password" required>
+            <label for="password" class="required-label">Пароль:</label>
+            <input type="password" id="password" name="password" required>
 
-        <label for="confirm-password" class="required-label">Підтвердження паролю:</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
+            <label for="confirm-password" class="required-label">Підтвердження паролю:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
 
-        <label for="gender">Стать:</label>
-        <select id="gender" name="gender">
-            <option value="male">Чоловіча</option>
-            <option value="female">Жіноча</option>
-        </select>
+            <label for="gender">Стать:</label>
+            <select id="gender" name="gender">
+                <option value="male">Чоловіча</option>
+                <option value="female">Жіноча</option>
+            </select>
 
-        <input type="submit" value="Зареєструватися">
-    </form>
+            <input type="submit" value="Зареєструватися">
+        </form>
+    </div>
 </body>
 </html>
